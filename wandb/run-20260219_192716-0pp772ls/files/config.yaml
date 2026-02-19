@@ -1,0 +1,58 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            jnanxrdvfj66oow4m8uixslgjg7h6bzo:
+                apple:
+                    ecpuCores: 2
+                    gpuCores: 14
+                    memoryGb: 32
+                    name: Apple M1 Pro
+                    pcpuCores: 6
+                    ramTotalBytes: "34359738368"
+                    swapTotalBytes: "20401094656"
+                args:
+                    - --model_path
+                    - outputs/exp_default/checkpoint-125
+                    - --eval_file
+                    - data/eval/eval_prompts.jsonl
+                cpu_count: 8
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "994662584320"
+                        used: "691451371520"
+                email: similoluwa@aims.ac.za
+                executable: /Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune/.venv/bin/python3
+                host: similoluwaadetoyosiokunowo-macbook-pro.aims.ac.za
+                memory:
+                    total: "34359738368"
+                os: macOS-26.2-arm64-arm-64bit
+                program: -m scripts.run_evaluate
+                python: CPython 3.12.9
+                root: /Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune
+                startedAt: "2026-02-19T17:27:16.474139Z"
+                writerId: jnanxrdvfj66oow4m8uixslgjg7h6bzo
+        m: []
+        python_version: 3.12.9
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 71
+                - 98
+            "2":
+                - 1
+                - 11
+                - 49
+                - 71
+                - 98
+            "3":
+                - 2
+                - 13
+            "4": 3.12.9
+            "5": 0.25.0
+            "6": 5.2.0
+            "12": 0.25.0
+            "13": darwin-arm64

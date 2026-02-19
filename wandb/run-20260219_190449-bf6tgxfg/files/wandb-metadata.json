@@ -1,0 +1,17 @@
+{
+  "os": "macOS-26.2-arm64-arm-64bit",
+  "python": "CPython 3.12.9",
+  "startedAt": "2026-02-19T17:04:49.983930Z",
+  "args": [
+    "--model_path",
+    "outputs/exp_default/checkpoint-125",
+    "--eval_file",
+    "data/eval/eval_prompts.jsonl"
+  ],
+  "program": "-m scripts.run_evaluate",
+  "email": "similoluwa@aims.ac.za",
+  "root": "/Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune",
+  "host": "similoluwaadetoyosiokunowo-macbook-pro.aims.ac.za",
+  "executable": "/Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune/.venv/bin/python3",
+  "writerId": "kx3w3rrlysf146s4jjxyd4sldqwh85oj"
+}

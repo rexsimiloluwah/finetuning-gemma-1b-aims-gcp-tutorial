@@ -1,0 +1,6 @@
+[2026-02-19 11:09:30,888][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/google/gemma-3-1b-it/resolve/main/config.json "HTTP/1.1 200 OK"
+[2026-02-19 11:09:31,548][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/google/gemma-3-1b-it/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-02-19 11:09:32,157][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/models/google/gemma-3-1b-it/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[2026-02-19 11:09:32,448][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/models/google/gemma-3-1b-it/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-02-19 11:09:34,566][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[2026-02-19 11:09:34,574][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/databricks/databricks-dolly-15k/bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a/README.md "HTTP/1.1 200 OK"

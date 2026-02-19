@@ -1,0 +1,3 @@
+- data.source=hf
+- data.bucket_name=dolly15k-bucket
+- experiment_id=exp_hf

@@ -1,0 +1,41 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            kx3w3rrlysf146s4jjxyd4sldqwh85oj:
+                args:
+                    - --model_path
+                    - outputs/exp_default/checkpoint-125
+                    - --eval_file
+                    - data/eval/eval_prompts.jsonl
+                email: similoluwa@aims.ac.za
+                executable: /Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune/.venv/bin/python3
+                host: similoluwaadetoyosiokunowo-macbook-pro.aims.ac.za
+                os: macOS-26.2-arm64-arm-64bit
+                program: -m scripts.run_evaluate
+                python: CPython 3.12.9
+                root: /Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune
+                startedAt: "2026-02-19T17:04:49.983930Z"
+                writerId: kx3w3rrlysf146s4jjxyd4sldqwh85oj
+        m: []
+        python_version: 3.12.9
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 71
+                - 98
+            "2":
+                - 1
+                - 11
+                - 49
+                - 71
+                - 98
+            "3":
+                - 13
+            "4": 3.12.9
+            "5": 0.25.0
+            "6": 5.2.0
+            "12": 0.25.0
+            "13": darwin-arm64

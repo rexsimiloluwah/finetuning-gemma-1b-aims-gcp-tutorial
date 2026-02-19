@@ -1,0 +1,24 @@
+experiment_id: exp_hf
+seed: 42
+model:
+  name: google/gemma-3-1b-it
+  max_length: 512
+data:
+  source: hf
+  hf_path: databricks/databricks-dolly-15k
+  local_path: data/raw/dolly.jsonl
+  bucket_name: dolly15k-bucket
+  gcs_path: data/raw/dolly.jsonl
+training:
+  batch_size: 4
+  learning_rate: 0.0002
+  num_epochs: 1
+  output_dir: outputs
+lora:
+  enabled: true
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - v_proj

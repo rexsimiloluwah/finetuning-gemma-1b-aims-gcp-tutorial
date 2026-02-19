@@ -1,0 +1,6 @@
+defaults:
+  - base
+
+lora:
+  r: 32
+  alpha: 64

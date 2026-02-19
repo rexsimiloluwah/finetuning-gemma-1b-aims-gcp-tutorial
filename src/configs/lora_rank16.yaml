@@ -1,0 +1,7 @@
+# Inherit everything from base.yaml and override LoRA
+defaults:
+  - base
+
+lora:
+  r: 16
+  alpha: 32

@@ -1,0 +1,33 @@
+project_name: gemma-dolly-experiment
+experiment_id: exp_hf
+seed: 42
+data:
+  source: hf
+  bucket_name: dolly15k-bucket
+  gcs_path: data/raw/dolly.jsonl
+  local_path: data/raw/dolly.jsonl
+  hf_path: databricks/databricks-dolly-15k
+dataset:
+  train_split: 1000
+  val_split: 200
+model:
+  name: google/gemma-1b
+  max_length: 512
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - v_proj
+training:
+  batch_size: 4
+  lr: 0.0002
+  epochs: 1
+  output_dir: outputs
+evaluation:
+  metrics:
+  - perplexity
+  - repetition_rate
+  eval_batch_size: 4
+  prompts_file: data/eval_prompts.jsonl

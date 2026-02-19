@@ -1,0 +1,20 @@
+  0%|                                                    | 0/125 [00:00<?, ?it/s]/Users/similoluwaokunowo/Desktop/Codes/gcp-tutorial-aims-gemma-finetune/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py:775: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+100%|██████████████████████████████████████████| 125/125 [21:13<00:00, 10.19s/it]
+{'loss': '5.504', 'grad_norm': '3.884', 'learning_rate': '0.0001856', 'epoch': '0.08'}
+{'loss': '4.607', 'grad_norm': '2.393', 'learning_rate': '0.0001696', 'epoch': '0.16'}
+{'loss': '3.35', 'grad_norm': '0.7474', 'learning_rate': '0.0001536', 'epoch': '0.24'}
+{'loss': '3.364', 'grad_norm': '1.025', 'learning_rate': '0.0001376', 'epoch': '0.32'}
+{'loss': '2.971', 'grad_norm': '1.452', 'learning_rate': '0.0001216', 'epoch': '0.4'}
+{'loss': '3.071', 'grad_norm': '3.62', 'learning_rate': '0.0001056', 'epoch': '0.48'}
+{'loss': '2.83', 'grad_norm': '0.9426', 'learning_rate': '8.96e-05', 'epoch': '0.56'}
+{'loss': '2.851', 'grad_norm': '0.7878', 'learning_rate': '7.36e-05', 'epoch': '0.64'}
+{'loss': '2.813', 'grad_norm': '0.9709', 'learning_rate': '5.76e-05', 'epoch': '0.72'}
+{'loss': '2.654', 'grad_norm': '0.7119', 'learning_rate': '4.16e-05', 'epoch': '0.8'}
+{'loss': '2.855', 'grad_norm': '1.076', 'learning_rate': '2.56e-05', 'epoch': '0.88'}
+{'loss': '2.526', 'grad_norm': '0.9809', 'learning_rate': '9.6e-06', 'epoch': '0.96'}
+                                                                                 
+{'eval_loss': '2.778', 'eval_runtime': '832.4', 'eval_samples_per_second': '0.601', 'eval_steps_per_second': '0.076', 'epoch': '1'}
+[2026-02-19 12:53:29,104][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/google/gemma-3-1b-it/resolve/main/config.json "HTTP/1.1 200 OK"
+[2026-02-19 12:53:29,413][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/google/gemma-3-1b-it/resolve/main/config.json "HTTP/1.1 200 OK"
+{'train_runtime': '1278', 'train_samples_per_second': '0.391', 'train_steps_per_second': '0.098', 'train_loss': '3.266', 'epoch': '1'}

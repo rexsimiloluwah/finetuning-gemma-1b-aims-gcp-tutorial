@@ -1,0 +1,30 @@
+experiment_id: "exp_default"
+seed: 42
+
+model:
+  name: google/gemma-3-1b-it
+  max_length: 256
+
+data:
+  source: hf # hf | gcs | local
+  hf_path: databricks/databricks-dolly-15k
+  local_path: data/raw/dolly.jsonl
+  bucket_name: dolly15k-bucket
+  gcs_path: data/raw/dolly.jsonl
+  eval_path: data/eval/eval_prompts.jsonl
+  max_train_samples: 500
+
+training:
+  batch_size: 4
+  learning_rate: 2e-4
+  num_epochs: 1
+  output_dir: outputs
+
+lora:
+  enabled: true
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - v_proj
