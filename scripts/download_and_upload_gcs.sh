@@ -2,8 +2,15 @@
 # Usage: ./scripts/download_and_upload_gcs.sh [bucket_name]
 # If no bucket_name is provided, a default bucket will be used.
 
+# Load .env file if it exists
+if [ -f .env ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
+
+export PROJECT_ID=$(gcloud config get-value project)
+
 # Default bucket name (change as needed for your course/tutorial)
-DEFAULT_BUCKET="dolly15k-bucket"
+DEFAULT_BUCKET="dolly15k-bucket-${PROJECT_ID}"
 
 # Use the provided bucket name, otherwise default
 BUCKET_NAME=${1:-$DEFAULT_BUCKET}
