@@ -1,3 +1,4 @@
+import os 
 from datasets import load_dataset
 from transformers import AutoTokenizer
 
@@ -11,6 +12,16 @@ def load_dolly_dataset(cfg):
 
     if cfg.data.source == "local":
         return load_dataset("json", data_files=cfg.data.local_path, split="train")
+    
+    if cfg.data.source == "gcs":
+        gcs_uri = f"gs://{cfg.data.bucket_name}/{cfg.data.gcs_path}"
+        # Copy from GCS to a local temp file then load
+        local_path = "data/raw/dolly.jsonl"
+        os.makedirs("data/raw", exist_ok=True)
+        os.system(f"gsutil cp {gcs_uri} {local_path}")
+        return load_dataset("json", data_files=local_path, split="train")
+
+    raise ValueError(f"Unsupported data source: {cfg.data.source}")
 
     raise ValueError(f"Unsupported data source: {cfg.data.source}")
 

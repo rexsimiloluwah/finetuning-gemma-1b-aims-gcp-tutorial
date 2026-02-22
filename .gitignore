@@ -12,3 +12,4 @@ env
 .git 
 .env 
 NOTES.md
+vertex_job.yaml
