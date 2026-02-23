@@ -1,0 +1,29 @@
+workerPoolSpecs:
+  - machineSpec:
+      machineType: g2-standard-4
+      acceleratorType: NVIDIA_L4
+      acceleratorCount: 1
+    replicaCount: 1
+    containerSpec:
+      imageUri: us-docker.pkg.dev/deeplearning-platform-release/gcr.io/pytorch-gpu.2-0.py310
+      command:
+        - bash
+        - -c
+      args:
+        - |
+          curl -LsSf https://astral.sh/uv/install.sh | sh &&
+          source $HOME/.local/bin/env &&
+          git clone https://github.com/rexsimiloluwah/finetuning-gemma-1b-aims-gcp-tutorial.git &&
+          cd finetuning-gemma-1b-aims-gcp-tutorial &&
+          uv sync &&
+          uv run python -m scripts.run_train data.source=gcs data.max_train_samples=10000 training.num_epochs=2 training.batch_size=8 experiment_id=exp_lora_r8_vertex
+          gsutil -m cp -r outputs/ gs://$BUCKET_NAME/runs/exp_lora_r8_vertex
+      env:
+        - name: HF_TOKEN
+          value: <YOUR_HF_TOKEN>
+        - name: WANDB_API_KEY
+          value: <YOUR_WANDB_API_KEY>
+        - name: WANDB_PROJECT
+          value: <YOUR_WANDB_PROJECT>
+        - name: BUCKET_NAME
+          value: <YOUR_BUCKET_NAME>
